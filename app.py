@@ -1,5 +1,5 @@
 def get_fib():
-    count = int(input("How many fibonacci numbers do you want? "))
+    num = int(input("How many fibonacci numbers do you want?: "))
     i = 1
     if num == 0:
         fibonacci = []
@@ -9,11 +9,10 @@ def get_fib():
         fibonacci = [1, 1]
     elif num  > 2:
         fibonacci= [1, 1]
-        while i < (count - 1):
-            fibonacci.append(fibonacci[1] + fibonacci[i-1])
+        while i < (num - 1):
+            fibonacci.append(fibonacci[i] + fibonacci[i - 1])
             i += 1
-
-            return fibonacci
-
-            print(get_fib())
-            input()
+        return fibonacci
+    
+print(get_fib())
+input()
